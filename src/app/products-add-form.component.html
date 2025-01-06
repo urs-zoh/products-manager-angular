@@ -1,0 +1,60 @@
+<form (ngSubmit)="onSubmit()" #productForm="ngForm" class="container mt-5">
+  <h2 class="text-center mb-4">Add a New Product</h2>
+
+  <!-- Type of Product -->
+  <div class="form-group">
+    <label for="typeProduct">Type of Product</label>
+    <input type="text" id="typeProduct" name="typeProduct" [(ngModel)]="newProduct.typeProduct" class="form-control"
+      required maxlength="50">
+  </div>
+
+  <!-- Vendor -->
+  <div class="form-group">
+    <label for="vendor">Vendor</label>
+    <input type="text" id="vendor" name="vendor" [(ngModel)]="newProduct.vendor" class="form-control" required
+      maxlength="40">
+  </div>
+
+  <!-- Model -->
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" id="model" name="model" [(ngModel)]="newProduct.model" class="form-control" maxlength="30">
+  </div>
+
+  <!-- Price -->
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" id="price" name="price" [(ngModel)]="newProduct.Price" class="form-control" required min="101">
+  </div>
+
+  <!-- Image URL -->
+  <div class="form-group">
+    <label for="imageUrl">Image URL</label>
+    <input type="url" id="imageUrl" name="photoUrl" [(ngModel)]="newProduct.photoUrl" class="form-control">
+  </div>
+
+  <!-- Count -->
+  <div class="form-group">
+    <label for="count">Count</label>
+    <input type="number" id="count" name="count" [(ngModel)]="newProduct.count" class="form-control" required min="1">
+  </div>
+
+  <!-- Vendor Email -->
+  <div class="form-group">
+    <label for="vendorEmail">Vendor Email</label>
+    <input type="email" id="vendorEmail" name="vendorEmail" [(ngModel)]="newProduct.VendorEmail" class="form-control"
+      required maxlength="100">
+  </div>
+
+  <!-- Description -->
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea id="description" name="description" [(ngModel)]="newProduct.description" class="form-control"
+      rows="4"></textarea>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="form-group text-center mt-5">
+    <button type="submit" class="btn btn-primary">Add Product</button>
+  </div>
+</form>

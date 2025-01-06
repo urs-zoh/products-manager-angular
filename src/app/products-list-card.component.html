@@ -1,0 +1,15 @@
+<article class="card mb-4 shadow-sm">
+  <img class="card-img-top img-fluid rounded" [src]="product.photoUrl" alt="{{ product.typeProduct }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.typeProduct }} - {{ product.vendor }}</h5>
+    <p class="card-text">
+      <strong>Model:</strong> {{ product.model || 'N/A' }}<br>
+      <strong>Price:</strong> ${{ product.Price }}<br>
+      <strong>Quantity:</strong> {{ product.count }}
+    </p>
+    <p class="card-text">
+      {{ product.description }}
+    </p>
+    <button (click)="onDelete(product.id)" class="btn btn-danger mt-2">Delete</button>
+  </div>
+</article>

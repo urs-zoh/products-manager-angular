@@ -1,0 +1,17 @@
+<section class="hero-section text-center my-5">
+  <h2 class="hero-text mb-4">
+    Discover Products near you
+  </h2>
+</section>
+
+<article class="product-list">
+  <div class="container">
+    <!-- Row to hold the cards -->
+    <div class="row">
+      <!-- Loop through products and create a card for each -->
+      <div *ngFor="let product of productsService.products" class="col-md-4 mb-4">
+        <app-products-list-card [product]="product"></app-products-list-card>
+      </div>
+    </div>
+  </div>
+</article>

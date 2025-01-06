@@ -1,0 +1,21 @@
+.card {
+  width: 100%;
+  max-width: 350px;
+  /* Limit card width */
+  margin: auto;
+  /* Center the card horizontally */
+}
+
+.card-img-top {
+  border-radius: 0.25rem;
+  /* Slight rounding of image corners */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1rem;
+}
